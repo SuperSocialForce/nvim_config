@@ -7,5 +7,10 @@ return {
       -- Keep Copilot from taking over <Tab>; custom accept keys can be added later.
       vim.g.copilot_no_tab_map = true
     end,
+    config = function()
+      vim.keymap.set("i", "<Tab>", "<Plug>(copilot-accept-word)", {
+        silent = true,
+      })
+    end,
   },
 }
